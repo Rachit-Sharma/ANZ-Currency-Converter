@@ -1,0 +1,39 @@
+{
+    "decimalsForCurrencies": {
+        "AUD": 2,
+        "CAD": 2,
+        "CNY": 2,
+        "CZK": 2,
+        "DKK": 2,
+        "EUR": 2,
+        "GBP": 2,
+        "JPY": 0,
+        "NOK": 2,
+        "NZD": 2,
+        "USD": 2
+    },
+    "conversionRates": {
+        "AUD": {
+            "USD": 0.8371
+        },
+        "CAD": {
+            "USD": 0.8711
+        },
+        "USD": {
+            "CNY": 6.1715,
+            "JPY": 119.95
+        },
+        "EUR": {
+            "USD": 1.2315,
+            "CZK": 27.6028,
+            "DKK": 7.4405,
+            "NOK": 8.6651
+        },
+        "GBP": {
+            "USD": 1.5683
+        },
+        "NZD": {
+            "USD": 0.7750
+        }
+    }
+}
