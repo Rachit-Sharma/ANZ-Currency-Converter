@@ -15,10 +15,10 @@ class App extends Component {
     fromAmount: "",
     toCurrency: "",
     toAmount: ""
-  }
+  };
 
   //for input to conform to numeric format
-  controlNumericInput(inputString) {
+  controlNumericInput = (inputString) => {
     let tempFromAmount = inputString;
     tempFromAmount = tempFromAmount.replace(/[^\d.]/g, "");
     if (this.state.decimalsForCurrencies[this.state.fromCurrency] === 0) {
@@ -38,10 +38,10 @@ class App extends Component {
       ), ""); //RegExp translation: anything, which is preceded by a dot then as many digits as allowed by currency
     }
     this.setState({ fromAmount: tempFromAmount }, this.updateToAmount);
-  }
+  };
 
   //To keep result updated
-  updateToAmount() {
+  updateToAmount = () => {
     let tempToAmount = Number.parseFloat(this.state.fromAmount);
     let tempFromCurrency = this.state.fromCurrency;
     let rate = this.state.conversionRates[tempFromCurrency][this.state.toCurrency];
@@ -60,10 +60,10 @@ class App extends Component {
         this.setState({ toAmount: numToCurString(tempToAmount, this.state.decimalsForCurrencies[this.state.toCurrency]) });
       }
     }
-  }
+  };
 
   //To handle all changes in the form
-  formChangeHandler(e) {
+  formChangeHandler = (e) => {
     switch (e.target.name) {
       case "from-currency":
         this.setState({ fromCurrency: e.target.value }, () => { this.controlNumericInput(this.state.fromAmount.slice(0)); });
@@ -77,7 +77,7 @@ class App extends Component {
       default:
         break;
     }
-  }
+  };
 
   render() {
     return (
@@ -177,7 +177,7 @@ class App extends Component {
         </Form>
       </Container>
     );
-  }
-}
+  };
+};
 
 export default App;
